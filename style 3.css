@@ -288,17 +288,266 @@ p {
 }
 
 @media screen and (max-width: 992px) {
-    .nav {
-        display: none;
+    html, body {
+    /* font-size: 16px; */
+    font-family: Bahnschrift;
+    scroll-behavior: smooth;
+    margin: 0px;    
+    height: 50vw;
+    height: 100vh;
+}
+            
+.Link {
+position: relative;
+text-decoration: none;
+display: block;
+color: black;
+padding: -10px;
+transition: color ease 0.3s;
+}
+/* Hover */
+.Link::after {
+    content: '';
+    position: relative;
+    z-index: 3;
+    width: 10%;
+    height: 10%;
+    left: 0px;
+    bottom: 0;
+    background: rgba(97,163,0,1);
+    transition: all ease 0.3s;
+}
+
+.Link:hover {
+    color: white;
+}
+
+.Link:hover::after {
+    height: 100%;
     }
-    #logo {
-        display: flex;
-        justify-content: center;
+a {
+    cursor: pointer;
+}
+p {
+    line-height: 1;
+}
+/* Fin de hover */
+
+/* Navigation bar */
+.navigation {
+        z-index: 3;
+        /* overflow: hidden; */
+        background-color: #fff;
+        border-bottom:1px solid #ddd;
+        border-top:1px solid #ddd;
+        position: fixed; /* Set the navbar to fixed position */
+        top: 0; /* Position the navbar at the top of the page */
+        width: 100%; /* Full width */
+        margin: 0px;
+}
+ .navigation p {
+    padding: 1px 1px;
+  } 
+.nav {
+    display : flex ;
+    flex-direction: row;
+    text-align: center;
+    justify-content: flex-end;
+    font-weight : bold;
+    font-size :  15px;
+    top: 5px;
+    margin-right: 3px;
+}
+.cat {
+    padding-top: 5px;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+.logo {
+    display: flex;
+    justify-content: flex-start;
+    
+}
+#PARIS___DEMAIN_ {
+  left: 85px;
+  top: 15px;
+  position: relative;
+  width: 943px;
+  height: 100px;
+  text-align: left;
+  font-family: Bahnschrift;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 40px;
+  color: rgba(97,163,0,1);
+  letter-spacing: -0.3px;
+  line-height: 40px;
+}
+#SUR {
+  left: 230px;
+  top: 15px;
+  position: absolute;
+  width: 66px;
+  height: 30px;
+  line-height: 40px;
+  margin-top: -5px;
+  text-align: left;
+  font-family: Bahnschrift;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 28px;
+  color: rgba(147,197,144,1);
+  letter-spacing: -0.3px;
+}
+
+
+#Calque_2_m {
+    position: absolute;
+    width: 45.5px;
+    height: 60px;
+    left: 20px;
+    top: 15px;
+}
+ fin de navigation bar
+
+first section 
+.content {
+    display: flex;
+    height: 200vh;
+    position: relative;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #fff;
+    scroll-snap-align: start;
+    
+}
+.text {
+  margin-top: 0vh;
+  width: initial;
+  margin-left: 30px;
+  margin-right: 30px;
+  font-size: 15px;
+  line-height: 10px;
+}
+#th_4 {
+    position: relative;
+    margin-top: 20vh;
+    width: 350px;
+    height: 260px;
+    top: 50px;
+    right: -10px;
+
+}
+#Calque_1 {
+  
+  position: relative;
+  width: 50px;
+  height: 70.5px;
+  right: -200px;
+  top: -190px;
+  animation: animate2 1.5s 1;
+}
+#Calque_2_v {
+  
+  position: relative;
+  width: 50px;
+  height: 70.5px;
+  top: -170px;
+  right: -20px;
+  animation: animate3 1.5s 1;
+}
+
+#Calque_2_x {
+  
+  position: relative;
+  width: 50px;
+  height: 70.5px;
+  top: -50px;
+  right: -60px;
+  animation: animate1 1.5s;
+}
+/*@keyframes animate1 {
+    0% {
+        opacity : 0;
+        top : 100px;
     }
-    .oui {
-        display: block;
+    100% {
+        opacity : 1 ;
+        top:150.707px ;
+    }   
+}
+@keyframes animate2 {
+    0% {
+        opacity : 0;
+        top : 240px;
     }
-    .maps {
-        display : block;
+    100% {
+        opacity : 1 ;
+        top:290px ;
+    }   
+}
+@keyframes animate3 {
+    0% {
+        opacity : 0;
+        top : 220px;
     }
+    100% {
+        opacity : 1 ;
+        top:270.631px ;
+    }  
+} 
+
+*/
+
+.maps {display: inline-block;
+    /*background-color: aqua; */
+    scroll-snap-align: start;
+}
+#carte1 {
+    /* background-color: aquamarine; */
+    height: 100vh;
+    /*padding-top: 7vh;*/
+    display: flex;
+    align-items: center;
+    /*justify-content: space-around;*/
+}
+#poster1 {
+    position:relative;
+    margin-top:-500px;
+    width: 70vw;
+    height: 40vh;
+    margin-left: 50px;
+    /*flex-shrink: 1;*/
+}
+#giec_alimentation {
+    /*display: flex;*/
+    position:relative;
+    /* background-color: antiquewhite; */
+    align-items: center;
+    position:relative;
+    margin-right : 50px;
+    /*justify-content: space-around;*/
+    /*height: 5px;
+    width: 5px;
+    /*font-size: 10px;
+    /* padding-top: 15vh; */
+}
+#lorem {
+    position:relative;
+    margin-top: 5px;
+    margin-left:10px;
+    margin-bottom: 200px;
+}
+#map { width: 50vw;
+    height : 50vh;
+z-index: 3;}
+
+.oui {
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    width: 100%;
+    height: 100%;
+}
+    
+         
 }
