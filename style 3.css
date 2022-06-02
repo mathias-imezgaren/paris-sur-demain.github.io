@@ -298,4 +298,7 @@ p {
     .oui {
         display: block;
     }
+    .maps {
+        display : block;
+    }
 }
