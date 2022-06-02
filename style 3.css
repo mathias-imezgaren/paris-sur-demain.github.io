@@ -479,12 +479,12 @@ first section
     display: block;
     align-items: center;
     margin-right : 0px;
-    /*justify-content: space-around;*/
+    justify-content: center;
 }
 #poster1 {
     display:flex;
     position:relative;
-    margin-top:500px;
+    margin-top:800px;
     width: 70vw;
     height: 40vh;
     margin-left: 50px;
