@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+    <head>
+        <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>v5</title>
+        <link href = "paris sur demain\style 3.css" rel = 'stylesheet' type="text/css" >
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
+        integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
+        crossorigin=""/>
+        <link href="https://emoji-css.afeld.me/emoji.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+        <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+        <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
+        integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
+        crossorigin=""></script>
+        <script src = 'papaparse.min.js'></script>
+    </head>
+    <body>
+        <!-- Barre de navigation -->
+        <div class="navigation">
+            <div id ='logo' class ='logo'>
+                <div id="PARIS___DEMAIN_">
+                    <a>PARIS </a>
+                    <a><br></a>
+                    <a >DEMAIN !</a>
+                </div>
+                <div id="SUR">
+                    <a>SUR<a>
+                </div>
+                <div id="Calque_2" class="Calque_2">
+                    <img id="Calque_2_m" src="paris_sur_demain\radis.png">
+                </div>
+            </div>
+            <div class = 'nav'>
+                <div class="cat"> 
+                    <p><a href="#content" class="Link">Notre projet</a></p>
+                </div>
+                <div class = 'cat'>
+                    <p><a href="#carte1" class="Link">Carte</a></p>
+                </div>
+                <div class="cat">
+                    <p><a href="#giec_alimentation" class="Link">GIEC</a></p>
+                </div>            
+            </div>
+        </div>
+        <!-- Fin de barre de nav -->
+        <div class="oui">
+            <!-- First section -->
+            <div class="content maps" id="content">
+                <div id="carte" class="carte">
+                    <img id="th_4" src="paris_sur_demain\carteee.png">
+                    <div class = 'point'>
+                        <img id="Calque_2_v" src="paris_sur_demain\radis.png">
+                        <img id="Calque_1" src="paris_sur_demain\poisson.png">
+                        <img id="Calque_2_x" src="paris_sur_demain\pull.png">
+                    </div>
+                </div>
+                <div class="text" id = 'text'>
+                    <h2>Notre projet</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sollicitudin pellentesque tempus. Nullam vulputate quam dolor, id commodo lectus convallis non. Integer in massa quis mi finibus blandit at vitae nulla. Vestibulum id justo nec mi volutpat ornare sed a mauris. Suspendisse vehicula viverra tellus at ultrices. Vivamus orci urna, rhoncus ut finibus vitae, luctus id magna. Aenean nec ligula a leo lobortis ullamcorper in sed tortor. Ut auctor, augue a rutrum gravida, urna elit fringilla elit, vitae pellentesque nulla nibh at ex. Nulla faucibus tellus in lectus sollicitudin, et malesuada ligula vestibulum. Aliquam a sollicitudin neque.</p>
+                </div>
+            </div>
+            <!--  Fin de first section -->
+            
+            <div id ='carte1' class ='maps'>
+                <div id="map"></div>
+                <div id="cc">
+                    <div id="c1">
+                        <input type="checkbox" value="other" id = 'other' name="other" onClick="myFunction()">
+                        <label for = 'other'> Fruits et légumes </label>
+                        <i class="em em-broccoli" aria-role="presentation" aria-label="BROCCOLI"></i>
+                    </div>
+                    <div id="c2">
+                        <input type="checkbox" value="other" id = 'other1' name="other" onClick="myFunction1()">
+                        <label for = 'other1'> Poissons français</label>
+                        <i class="em em-fr" aria-role="presentation" aria-label="France Flag"></i>
+                    </div>
+                    <div id="c3">
+                        <input type="checkbox" value="other" id = 'other2' name="other" onClick="myFunction2()">
+                        <label for = 'other2'> Friperie </label>
+                        <i class="em em-jeans" aria-role="presentation" aria-label="JEANS"></i>
+                    </div>    
+                    <div id="c4">
+                        <input type="checkbox" value="other" id = 'other3' name="other" onClick="myFunction3()">
+                        <label for = 'other3'> Recyclerie </label>
+                        <i class="em em-wrench" aria-role="presentation" aria-label="WRENCH"></i>
+                    </div>    
+                    <div id="c5">
+                        <input type="checkbox" value="other" id = 'other4' name="other" onClick="myFunction4()">
+                        <label for = 'other4'> Grainothèque</label>
+                        <i class="em em-male-farmer" aria-role="presentation" aria-label=""></i>
+                    </div>    
+                    <div id="c6">
+                        <input type="checkbox" value="other" id = 'other5' name="other" onClick="myFunction5()">
+                        <label for = 'other5'> Donner ses vêtements </label>
+                        <i class="em em-recycle" aria-role="presentation" aria-label="BLACK UNIVERSAL RECYCLING SYMBOL"></i>
+                    </div>                         
+                </div>
+            </div>
+            <div id ='giec_alimentation' class ='maps'>
+                <div class = 'poster' id="alimentation">
+                    <img  class= 'iii' id='poster1' src ="paris_sur_demain\poster_alimentation1.png">
+                    <div class= 'iii' id ='lorem'>
+                        <h1> Qu'en disent les experts ?</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sollicitudin pellentesque tempus. Nullam vulputate quam dolor, id commodo lectus convallis non. Integer in massa quis mi finibus blandit at vitae nulla. Vestibulum id justo nec mi volutpat ornare sed a mauris. Suspendisse vehicula viverra tellus at ultrices. Vivamus orci urna, rhoncus ut finibus vitae, luctus id magna. Aenean nec ligula a leo lobortis ullamcorper in sed tortor. Ut auctor, augue a rutrum gravida, urna elit fringilla elit, vitae pellentesque nulla nibh at ex. Nulla faucibus tellus in lectus sollicitudin, et malesuada ligula vestibulum</p>
+                    </div>
+                </div>
+                <div class = 'poster' id="transport">
+                    <div class= 'iii' id ='lorem'>
+                        <h1> Qu'en disent les experts ?</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sollicitudin pellentesque tempus. Nullam vulputate quam dolor, id commodo lectus convallis non. Integer in massa quis mi finibus blandit at vitae nulla. Vestibulum id justo nec mi volutpat ornare sed a mauris. Suspendisse vehicula viverra tellus at ultrices. Vivamus orci urna, rhoncus ut finibus vitae, luctus id magna. Aenean nec ligula a leo lobortis ullamcorper in sed tortor. Ut auctor, augue a rutrum gravida, urna elit fringilla elit, vitae pellentesque nulla nibh at ex. Nulla faucibus tellus in lectus sollicitudin, et malesuada ligula vestibulum</p>
+                    </div>
+                    <img class= 'iii' id='poster2' src ="paris_sur_demain\poster2.png">
+                </div>
+                <div class = 'poster' id="sobriete">
+                    <img class= 'iii' id='poster3' src ="paris_sur_demain\poster3.png">
+                    <div class= 'iii' id ='lorem'>
+                        <h1> Qu'en disent les experts ?</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sollicitudin pellentesque tempus. Nullam vulputate quam dolor, id commodo lectus convallis non. Integer in massa quis mi finibus blandit at vitae nulla. Vestibulum id justo nec mi volutpat ornare sed a mauris. Suspendisse vehicula viverra tellus at ultrices. Vivamus orci urna, rhoncus ut finibus vitae, luctus id magna. Aenean nec ligula a leo lobortis ullamcorper in sed tortor. Ut auctor, augue a rutrum gravida, urna elit fringilla elit, vitae pellentesque nulla nibh at ex. Nulla faucibus tellus in lectus sollicitudin, et malesuada ligula vestibulum</p>
+                    </div>
+                </div>
+            </div>            
+        </div>
+    </body>
+    <script>
+        var s = Papa.parse(`"Les Gourmandises de Catherine 
+(livré samedi)",48.8425967,2.3022604,Poiscaille,Alimentation,"116 Rue Lecourbe, 75015",15e,"https://www.google.fr/maps/place/Les+Gourmandises+de+Catherine/@48.8426122,2.30009,17z/data=!3m1!4b1!4m5!3m4!1s0x47e6703c234bc361:0x5ca9259d2b7c11a8!8m2!3d48.8426052!4d2.3022928",0
+Entre Pots (livré samedi),48.8342132,2.3216127,Poiscaille,Alimentation,"2 Pl. de Moro-Giafferi, 75014",14e,"https://www.google.fr/maps/place/Entre+Pots+%7C+Epicerie+vrac+et+bio/@48.8341943,2.3194663,17z/data=!3m1!4b1!4m5!3m4!1s0x47e671ed0d49d019:0xc1f6e13f823da28c!8m2!3d48.8341952!4d2.321624",1
+Day by Day Sèvres (livré samedi),48.84795286,2.318902,Poiscaille,Alimentation,"70 Rue de Sèvres, 75007",7e,"https://www.google.fr/maps/place/day+by+day+-+Mon+%C3%A9picerie+en+vrac/@48.847794,2.3167133,17z/data=!3m1!4b1!4m5!3m4!1s0x47e6702d73740013:0x3b342e1d52d8cbee!8m2!3d48.8477935!4d2.3189021",2
+Nysa - Rendez vous (livré samedi),48.84570586,2.404047171,Poiscaille,Alimentation,"108 rue Lecourbe, 75015",15e,"https://www.google.fr/maps/place/nysa+cavistes./@48.8428237,2.2371051,13z/data=!4m9!1m2!2m1!1sNysa+-+Rendez+vous+!3m5!1s0x47e6711560cad807:0x63b2b1b6d0a0a82a!8m2!3d48.842846!4d2.3030072!15sChJOeXNhIC0gUmVuZGV6IHZvdXMiA4gBAVoSIhBueXNhIHJlbmRleiB2b3VzkgEKd2luZV9zdG9yZQ",3
+La petite cagette (livré samedi),48.85943698,2.376193271,Poiscaille,Alimentation,"38 - 40 Rue Popincourt, 75011",11e,"https://www.google.fr/maps/place/La+Petite+Cagette/@48.8592076,2.3739402,17z/data=!3m1!4b1!4m5!3m4!1s0x47e66df9a3ab8bb3:0xbc65128089f93959!8m2!3d48.8592076!4d2.3761289",4
+Go Go Kiwi (livré samedi),48.88401946,2.380833069,Poiscaille,Alimentation,"16 Av. de Laumière, 75019",19e,"https://www.google.fr/maps/place/GO+GO+KIWI+!+%C3%A9picerie+bio,+vrac+et+solidaire/@48.8839066,2.3786551,17z/data=!3m1!4b1!4m5!3m4!1s0x47e66df579a9ddc5:0x5d7a2cb9e990be97!8m2!3d48.8838842!4d2.3807858",5
+La Panaméenne (livré samedi),48.8267447,2.3134152,Poiscaille,Alimentation,"1 Pl. Alice Guy, 75014",14e,"https://www.google.fr/maps/place/La+Panam%C3%A9enne/@48.8266915,2.3112097,17z/data=!3m1!4b1!4m5!3m4!1s0x47e67051fd627e4b:0x7a0c4be5357e6eff!8m2!3d48.8266829!4d2.3133834",6
+Crèmerie Delacour (livré samedi),48.87762049,2.315019413,Poiscaille,Alimentation,"8 Rue Corvetto, 75008",8e,"https://www.google.fr/maps/place/Cr%C3%A8merie+Delacour/@48.8775182,2.3127878,17z/data=!3m1!4b1!4m5!3m4!1s0x47e66fb7d1fba315:0x96f3b2fdc59ffc04!8m2!3d48.8775182!4d2.3149765",7
+Le LAB Français (livré samedi),48.88311761,2.338447227,Poiscaille,Alimentation,"7 Rue Houdon, 75018",18e,"https://www.google.fr/maps/place/Le+LAB+fran%C3%A7ais/@48.882973,2.3362478,17z/data=!3m1!4b1!4m5!3m4!1s0x47e66f28517d6ad1:0x3fedce96d0fb7079!8m2!3d48.882973!4d2.3384365",8
+Le Village Epicerie Fine (livré samedi),48.87103815,2.357906156,Poiscaille,Alimentation,"25 Rue Bouchardon, 75010",10e,"https://www.google.fr/maps/place/Le+Village+Traiteur+Italien/@48.8709429,2.355696,17z/data=!3m1!4b1!4m5!3m4!1s0x47e66e0e097306a9:0xd7ef436f26db264c!8m2!3d48.8709429!4d2.3578847",9
+AMAP Transpédégouine,48.8630165,2.3543073,AMAP,Alimentation,"63 Rue Beaubourg, 75003",3e,"https://www.google.fr/maps/place/AMAP+F%C3%A9ministe+Transp%C3%A9d%C3%A9gouine/@48.863095,2.3501139,17z/data=!3m1!4b1!4m5!3m4!1s0x47e66fc9686dcb9f:0x83e39e93b37a8a76!8m2!3d48.8630968!4d2.3543334",10
+Panier du 6ème,48.850714,2.3326577,AMAP,Alimentation,"78 Rue Bonaparte, 75006",6e,"https://www.google.fr/maps/place/AMAP+Panier+du+6%C3%A8me+%C3%A0+la+mairie/@48.8505509,2.3304179,17z/data=!3m1!4b1!4m5!3m4!1s0x47e6717389a003d1:0x139dd6e3da7b35a!8m2!3d48.8505509!4d2.3326066",11
+Les Cagettes de La Fayette,48.8754075,2.3425926,AMAP,Alimentation,"60 Rue La Fayette, 75009",9e,"https://www.google.fr/maps/place/AMAP+Les+Cagettes+de+La+Fayette/@48.8754579,2.340556,17z/data=!3m1!4b1!4m5!3m4!1s0x47e66f4522e6912b:0x4cd401f6052642b3!8m2!3d48.8754578!4d2.3427447",12
+AMAP COEUR D’ARTICHAUT,48.8363155,2.4003408,AMAP,Alimentation,"2 Rue Edouard Robert, 75012",12e,"https://www.google.fr/maps/place/AMAP+C%C5%93urs+d'artichaut/@48.836383,2.3981445,17z/data=!3m1!4b1!4m5!3m4!1s0x47e6732c51ab7739:0xc0c1a53555844446!8m2!3d48.8363667!4d2.4002991",13
+Les Trognons -  Amap du quartier de Paris Nation,48.8484106,2.379556,AMAP,Alimentation,"8 Imp. Crozatier, 75012",12e,"https://www.google.fr/maps/place/AMAP+Trognons+de+la+Nation/@48.8483729,2.3774777,17z/data=!3m1!4b1!4m5!3m4!1s0x47e6720f058eb603:0xfe0dff8d69948206!8m2!3d48.8483755!4d2.379667",14
+Patates Douz,48.8462386,2.3761473,AMAP,Alimentation,"1 Rue Hector Malot, 75012",12e,"https://www.google.fr/maps/place/AMAP+Patates+Douz'/@48.8455788,2.3729395,17z/data=!3m1!4b1!4m5!3m4!1s0x47e673e74cc45b1b:0x68dfac2d59092a7d!8m2!3d48.8456076!4d2.3750993",15
+le Kdi des Grands Moulins,48.8269638,2.382394,AMAP,Alimentation,"15 Rue Jean Antoine de Baïf, 75013",13e,"https://www.google.com/maps/place/ESSpace/@48.8271446,2.3811034,17z/data=!3m1!4b1!4m5!3m4!1s0x47e67239a4fcbcab:0xba3ada5287e54617!8m2!3d48.8271446!4d2.3832921",16
+AMAP Moulin des lapins,48.8334851,2.3198808,AMAP,Alimentation,"Pl. de la Garenne, 75014",14e,"https://www.google.fr/maps/place/AMAP+Moulin+des+lapins/@48.8339341,2.3176767,17z/data=!3m1!4b1!4m5!3m4!1s0x47e671d8790e196f:0x99137706a1ec099!8m2!3d48.8339342!4d2.3219039",17
+AMAP des Batignolles,48.89191,2.310304,AMAP,Alimentation,"84 rue Mstislav Rostroprovitch, 75017",17e,"https://www.google.fr/maps/place/AMAP+des+Batignolles/@48.8918958,2.3081743,17z/data=!3m1!4b1!4m5!3m4!1s0x47e66f140b3dc825:0x4fcdbf8bba3db42c!8m2!3d48.8919247!4d2.3103903",18
+AMAP des Brunelles,48.8784358,2.2912752,AMAP,Alimentation," 21Bis Rue d'Armaillé, 75017",17e,"https://www.google.fr/maps/place/AMAP+Les+Brunelles/@48.878466,2.2890197,17z/data=!3m1!4b1!4m5!3m4!1s0x47e66f92be78c873:0x91fd8ab522a3eb24!8m2!3d48.8784802!4d2.2912406",19
+Le Haricot Biomagique,48.884294,2.3538553,AMAP,Alimentation,"9 - 11 Rue de la Charbonnière, 75018",18e,"https://www.google.fr/maps/place/AMAP+Le+Haricot+Biomagique/@48.8847605,2.3527875,17z/data=!3m1!4b1!4m5!3m4!1s0x47e66f75840a8435:0x2da087bfdaa20d4f!8m2!3d48.884759!4d2.3549769",20
+AMAP La Pradieuse,48.8767259,2.3824165,AMAP,Alimentation,"25 Rue Pradier, 75019",19e,"https://www.google.fr/maps/place/AMAP+La+Pradieuse/@48.8767862,2.3801543,17z/data=!3m1!4b1!4m5!3m4!1s0x47e66dff0279c43d:0xef53c156f36f2973!8m2!3d48.8767589!4d2.3824186",21
+Coup de Pousse-Association Ardennoise,48.88816,2.38624,AMAP,Alimentation,"19 Rue des Ardennes, 75019",19e,"https://www.google.fr/maps/place/AMAP+Coup+de+Pousse-Association+Ardennoise/@48.8881029,2.383707,17z/data=!3m1!4b1!4m5!3m4!1s0x47e66df89755b713:0x8a6bcf15e3e49099!8m2!3d48.8881029!4d2.3858957",22
+AMAP DES PRAIRIES,48.8611396,2.4049296,AMAP,Alimentation,"4 Rue des Prairies, 75020",20e,"https://www.google.fr/maps/place/AMAP+Les+Prairies/@48.8611211,2.4027543,17z/data=!3m1!4b1!4m5!3m4!1s0x47e66d1e427f9fcf:0x2cc4ae77ec817e60!8m2!3d48.8611211!4d2.404943",23
+PANIER SAINT BLAISE,48.8579296,2.4071457,AMAP,Alimentation,"56 Rue St Blaise, 75020",20e,"https://www.google.fr/maps/place/56+Rue+Saint-Blaise,+75020+Paris/@48.8579219,2.4049406,17z/data=!3m1!4b1!4m5!3m4!1s0x47e66d812898e99d:0x4149e5e661d9b4c1!8m2!3d48.8579219!4d2.4071293",24
+BEL & VERT à PARIS XIX,48.8860129,2.3833794,AMAP,Alimentation," 118 Av. Jean Jaurès, 75019",19e,"https://www.google.fr/maps/place/AMAP+Bel%26Vert/@48.8860271,2.3177254,13z/data=!4m9!1m2!2m1!1sBEL+%26+VERT+%C3%A0+PARIS+XIX!3m5!1s0x47e66da47c7e0df3:0xa70f04fb27b0a5e8!8m2!3d48.8861258!4d2.3835821!15sChdCRUwgJiBWRVJUIMOgIFBBUklTIFhJWFoZIhdiZWwgJiB2ZXJ0IMOgIHBhcmlzIHhpeJIBG2Fzc29jaWF0aW9uX29yX29yZ2FuaXphdGlvbg",25
+La louve,48.89691845,2.353565848,Supermarché coopératif,Alimentation,"116 Rue des Poissonniers, 75018 ",18e,"https://www.google.com/maps/place/Coopérative+La+Louve/@48.894326,2.3530822,15z/data=!4m5!3m4!1s0x0:0x47cbae727ce7994a!8m2!3d48.8943321!4d2.3530147",26
+Mediatheque Canopee la Fontaine,48.86237,2.34721,Grainotheque,Apprentisage et mobilisation,"10 Pass. de la Canopée, 75001",1er,"https://www.google.fr/maps/place/M%C3%A9diath%C3%A8que+de+la+Canop%C3%A9e+La+Fontaine/@48.8622323,2.3450181,17z/data=!3m1!4b1!4m5!3m4!1s0x47e66e2274c359b5:0x42464258a9f3346d!8m2!3d48.8622323!4d2.3472068",27
+Bibliotheque Marguerite Audoux,48.86387717,2.360247514,Grainotheque,Apprentisage et mobilisation,"10 Rue Portefoin, 75003",3e,"https://www.google.fr/maps/place/Library+Marguerite+Audoux/@48.8637078,2.3580159,17z/data=!3m1!4b1!4m5!3m4!1s0x47e66e05d18acfa7:0x69201edd1cdcca01!8m2!3d48.8637078!4d2.3602046",28
+Bibliotheque Louise Walser-Gaillard,48.88136268,2.332668163,Grainotheque,Apprentisage et mobilisation," 26 Rue Chaptal, 75009",9e,"https://www.google.fr/maps/place/Biblioth%C3%A8que+Louise+Walser-Gaillard+(Chaptal)/@48.8811087,2.3301576,17z/data=!3m1!4b1!4m5!3m4!1s0x47e66e492a707277:0xfc252d87f702be6c!8m2!3d48.8811169!4d2.3323503",29
+Bibliotheque Parmentier,48.86020163,2.379101756,Grainotheque,Apprentisage et mobilisation,"20bis Avenue Parmentier, 75011",11e,"https://www.google.fr/maps/place/Biblioth%C3%A8que+Parmentier/@48.8600745,2.3748531,17z/data=!3m1!4b1!4m5!3m4!1s0x47e671fd7944bb1f:0x23ef6d15613016d1!8m2!3d48.8600749!4d2.3790725",30
+Bibliotheque Glaciere-Marina Tsvetaieva,48.82749882,2.341943598,Grainotheque,Apprentisage et mobilisation,"132 Rue de la Glacière, 75013",13e,"https://www.google.fr/maps/place/Icebox+Library/@48.8273717,2.3397549,17z/data=!3m1!4b1!4m5!3m4!1s0x47e671bd5823cc5b:0xd65d28efee50986d!8m2!3d48.8273725!4d2.3419301",31
+Médiatheque Marguerite Yourcenar,48.83707855,2.303643285,Grainotheque,Apprentisage et mobilisation,"41 Rue d'Alleray, 75015",15e,"https://www.google.fr/maps/place/M%C3%A9diath%C3%A8que+Marguerite-Yourcenar/@48.8369444,2.3014224,17z/data=!3m1!4b1!4m5!3m4!1s0x47e6703f55556267:0x83a19f70ea3c349!8m2!3d48.8369144!4d2.3035761",32
+Bibliotheque Vaclav Havel,48.88914496,2.3631041,Grainotheque,Apprentisage et mobilisation,"26 Espl. Nathalie Sarraute, 75018",18e,"https://www.google.fr/maps/place/Vaclav+Havel+Library/@48.889018,2.3608403,17z/data=!3m1!4b1!4m5!3m4!1s0x47e66e7bced1c92d:0xb48b52caffc51d3e!8m2!3d48.889018!4d2.363029",33
+Bibliotheque Sorbier,48.86613632,2.392964579,Grainotheque,Apprentisage et mobilisation,"17 Rue Sorbier, 75020 Paris",17e,"https://www.google.fr/maps/place/Biblioth%C3%A8que+Sorbier/@48.8661434,2.390969,17z/data=!3m1!4b1!4m5!3m4!1s0x47e66d927dd71d65:0x4fcf466ac6a0bbaf!8m2!3d48.8659533!4d2.3928737",34
+Bibliotheque Maurice Genevoix,48.8955581,2.3634311,Grainotheque,Apprentisage et mobilisation,"19 Rue Tristan Tzara, 75018",18e,"https://www.google.fr/maps/search/Bibliotheque+Maurice+Genevoix/@48.9433702,2.2505471,12z/data=!3m1!4b1",35
+Bibliotheque Louise Michel,48.85338481,2.401403863,Grainotheque,Apprentisage et mobilisation,"29-35 Rue des Haies, 75020",20e,"https://www.google.fr/maps/place/Library+Louise+Michel/@48.853286,2.3988933,17z/data=!3m1!4b1!4m5!3m4!1s0x47e66d8758740f09:0xd47946019300787e!8m2!3d48.8532395!4d2.4011266",36
+La maison du Jardinage,48.83584932,2.382920803,Grainotheque,Apprentisage et mobilisation," 41 Rue Paul Belmondo, 75012",12e,"https://www.google.fr/maps/place/Maison+du+Jardinage/@48.8356163,2.3799489,17z/data=!3m1!4b1!4m5!3m4!1s0x47e67215e41656c1:0xfadeeaf8d15df4eb!8m2!3d48.8356163!4d2.3821376",37
+Académie du Climat,48.85643441,2.355859656,Formations,Apprentisage et mobilisation,"2 Pl. Baudoyer, 75004 ",4e,"https://www.google.fr/maps/place/Academy+Du+Climat/@48.8562756,2.3536495,17z/data=!3m1!4b1!4m5!3m4!1s0x47e66f9f2d7a39af:0x4c54e3b38adc5280!8m2!3d48.8562756!4d2.3558382",38
+Ministère de la transition-écologique,48.86300122,2.324390548,Formations,Apprentisage et mobilisation,"246 Bd Saint-Germain, 75007 ",7e,"https://www.google.fr/maps/place/Minist%C3%A8re+de+la+Transition+%C3%A9cologique/@48.8755581,2.2451953,13z/data=!4m9!1m2!2m1!1sMinist%C3%A8re+de+la+transition+%C3%A9cologique!3m5!1s0x47e66502bdbc6419:0x648bfe587910cda2!8m2!3d48.8570156!4d2.3250772!15sCidNaW5pc3TDqHJlIGRlIGxhIHRyYW5zaXRpb24gw6ljb2xvZ2lxdWVaKSInbWluaXN0w6hyZSBkZSBsYSB0cmFuc2l0aW9uIMOpY29sb2dpcXVlkgEZZmVkZXJhbF9nb3Zlcm5tZW50X29mZmljZZoBI0NoWkRTVWhOTUc5blMwVkpRMEZuU1VNeU9WcGxWRXhSRUFF",39
+Ministère de la transition écologique,48.863001218586064,2.3243905475317885,Formations,Apprentisage et mobilisation,"246 Bd Saint-Germain, 75007 ",7e,"https://www.google.fr/maps/place/Minist%C3%A8re+de+la+Transition+%C3%A9cologique/@48.8755581,2.2451953,13z/data=!4m9!1m2!2m1!1sMinist%C3%A8re+de+la+transition+%C3%A9cologique!3m5!1s0x47e66502bdbc6419:0x648bfe587910cda2!8m2!3d48.8570156!4d2.3250772!15sCidNaW5pc3TDqHJlIGRlIGxhIHRyYW5zaXRpb24gw6ljb2xvZ2lxdWVaKSInbWluaXN0w6hyZSBkZSBsYSB0cmFuc2l0aW9uIMOpY29sb2dpcXVlkgEZZmVkZXJhbF9nb3Zlcm5tZW50X29mZmljZZoBI0NoWkRTVWhOTUc5blMwVkpRMEZuU1VNeU9WcGxWRXhSRUFF",39
+By Flowers,48.884812038982616,2.340403678,Friperie,Outils de 2nd main,"86 Rue des Martyrs, 75018",18e,"https://www.google.fr/maps/place/By+Flowers/@48.8832937,2.3375963,17z/data=!3m1!4b1!4m5!3m4!1s0x47e66e44683f27e7:0x62836467761694bd!8m2!3d48.8832932!4d2.3398021 ",40
+Kiliwatch,48.86643779,2.345761886,Friperie,Outils de 2nd main,"64 Rue Tiquetonne, 75002",2e,"https://www.google.fr/maps/place/Kiliwatch/@48.8591469,2.3345563,15z/data=!4m9!1m2!2m1!1sKiliwatch!3m5!1s0x47e66e1874224469:0x8e2256427110566e!8m2!3d48.8648522!4d2.3456871!15sCglLaWxpd2F0Y2haCyIJa2lsaXdhdGNokgEOY2xvdGhpbmdfc3RvcmU",41
+Bobby second hand,48.86879571,2.347198055,Friperie,Outils de 2nd main,"89 Rue Réaumur, 75002",2e,"https://www.google.fr/maps/place/Bobby/@48.867252,2.3447833,17z/data=!3m1!4b1!4m5!3m4!1s0x47e66dfd9d74fc71:0xe83a11f088b33bef!8m2!3d48.867252!4d2.346972",42
+Kilo Shop,48.85911105,2.35188831,Friperie,Outils de 2nd main,"69-71 Rue de la Verrerie, 75004",4e,"https://www.google.fr/maps/place/Kilo+Shop/@48.8672506,2.3294624,14z/data=!4m9!1m2!2m1!1sKilo+Shop!3m5!1s0x47e66e1db119c7f1:0x73b4b0e778587e55!8m2!3d48.8581995!4d2.3521235!15sCglLaWxvIFNob3AiA4gBAVoLIglraWxvIHNob3CSARN1c2VkX2Nsb3RoaW5nX3N0b3Jl",43
+Adöm,48.85522514,2.373432371,Friperie,Outils de 2nd main,"35 Rue de la Roquette 56, 75011",11e,"https://www.google.fr/maps/place/Ad%C3%B6m/@48.8551228,2.3711793,17z/data=!3m1!4b1!4m5!3m4!1s0x47e672075abe3b09:0xe8d5656d78a881e2!8m2!3d48.8551228!4d2.373368",44
+Guerrisol,48.83260537,2.357178923,Friperie,Outils de 2nd main,"5 Av. d'Italie, 75013",13e,"https://www.google.fr/maps/place/Guerrisol+by+Guerrida/@48.8301857,2.3234557,14z/data=!4m9!1m2!2m1!1sGuerrisol!3m5!1s0x47e6718e880a0161:0x6a8f0b42e26b752b!8m2!3d48.8301737!4d2.3563237!15sCglHdWVycmlzb2wiA4gBAVoLIglndWVycmlzb2ySARN1c2VkX2Nsb3RoaW5nX3N0b3Jl",45
+Guerrisol,48.88749231,2.325936554,Friperie,Outils de 2nd main,"13 Av. de Clichy, 75017 ",17e,"https://www.google.fr/maps/place/Guerrisol/@48.8847675,2.2937316,14z/data=!4m9!1m2!2m1!1sGuerrisol!3m5!1s0x47e66e4d1b3c9043:0x3a08ccf50da4a54d!8m2!3d48.8847641!4d2.3266898!15sCglHdWVycmlzb2wiA4gBAVoLIglndWVycmlzb2ySARN1c2VkX2Nsb3RoaW5nX3N0b3Jl",46
+Guerrisol,48.8938834,2.349014279,Friperie,Outils de 2nd main,"96 bis Bd Barbès, 75018 Paris",18e,"https://www.google.fr/maps/place/Guerrisol/@48.8913455,2.3169065,14z/data=!4m9!1m2!2m1!1sGuerrisol!3m5!1s0x47e66fb26a27ee57:0xddb15d66e8444533!8m2!3d48.8913435!4d2.3498763!15sCglHdWVycmlzb2wiA4gBAVoLIglndWVycmlzb2ySARN1c2VkX2Nsb3RoaW5nX3N0b3Jl",47
+Episode,48.86466037,2.349284269,Friperie,Outils de 2nd main,"12-16 Rue Tiquetonne, 75002",2e,"https://www.google.fr/maps/place/Episode/@48.8645785,2.3189907,14z/data=!4m9!1m2!2m1!1sEpisode!3m5!1s0x47e66e19be7eb8c9:0x14bdfaf6537249d7!8m2!3d48.8645785!4d2.3492142!15sCgdFcGlzb2RlIgOIAQFaCSIHZXBpc29kZZIBE3VzZWRfY2xvdGhpbmdfc3RvcmWaASNDaFpEU1VoTk1HOW5TMFZKUTBGblNVTTBjazE2WmtkbkVBRQ",48
+Vintage Desir,48.85746527,2.359167812,Friperie,Outils de 2nd main,"32 Rue des Rosiers, 75004",4e,"https://www.google.fr/maps/place/Vintage+D%C3%A9sir/@48.8573176,2.3570188,17z/data=!3m1!4b1!4m5!3m4!1s0x47e66e025d19942f:0x739725fe11fba2b5!8m2!3d48.8573541!4d2.3592533",49
+Aux comptoirs du chineur,48.85457711,2.362308998,Friperie,Outils de 2nd main,"49 Rue Saint-Paul, 75004",4e,"https://www.google.fr/maps/place/Aux+comptoirs+du+chineur/@48.8544162,2.3602278,17z/data=!3m1!4b1!4m5!3m4!1s0x47e671fe41d57951:0xcfd7244f0faa1b87!8m2!3d48.8544173!4d2.3624136",50
+La boutique sans argent,48.83654187,2.400322469,Friperie,Outils de 2nd main,"2 rue Edouard Robert, 75012",12e,"https://www.google.fr/maps/place/Shop+without+money+(the+Siga+Siga-)/@48.836383,2.3981445,17z/data=!3m1!4b1!4m5!3m4!1s0x47e6726c0cc51539:0xdf605c5f6c127697!8m2!3d48.8363667!4d2.4002991",51
+Bis boutique solidaire,48.87864311,2.342499036,Friperie,Outils de 2nd main,"19 Rue Lamartine, 75009",9e,"https://www.google.fr/maps/place/Bis+Boutique+Solidaire/@48.8763873,2.3087576,14z/data=!4m9!1m2!2m1!1sBIS+Boutique+Solidaire!3m5!1s0x47e66e3f5f79c41f:0x6a3d1edd36e912f7!8m2!3d48.8764793!4d2.3417214!15sChZCSVMgQm91dGlxdWUgU29saWRhaXJlIgOIAQFaGCIWYmlzIGJvdXRpcXVlIHNvbGlkYWlyZZIBE3VzZWRfY2xvdGhpbmdfc3RvcmU",52
+BIS Boutique Solidaire,48.86419303,2.366049636,Friperie,Outils de 2nd main,"7 Bd du Temple, 75003",3e,"https://www.google.fr/maps/place/BIS+Boutique+Solidaire/@48.863459,2.3332623,14z/data=!4m9!1m2!2m1!1sBIS+Boutique+Solidaire!3m5!1s0x47e66e0777ac4d41:0x849c618ec67d765c!8m2!3d48.8634646!4d2.3662435!15sChZCSVMgQm91dGlxdWUgU29saWRhaXJlIgOIAQFaGCIWYmlzIGJvdXRpcXVlIHNvbGlkYWlyZZIBE3VzZWRfY2xvdGhpbmdfc3RvcmU",53
+Bis boutique solidaire,48.84853556,2.285006043,Friperie,Outils de 2nd main,"96 Rue St Charles, 75015",15e,"https://www.google.fr/maps/place/BIS+Boutique+Solidaire/@48.8458858,2.2516953,14z/data=!4m9!1m2!2m1!1sBIS+Boutique+Solidaire!3m5!1s0x47e67133b40851d1:0xde2af5dd286ad3de!8m2!3d48.8458796!4d2.2846642!15sChZCSVMgQm91dGlxdWUgU29saWRhaXJlIgOIAQFaGCIWYmlzIGJvdXRpcXVlIHNvbGlkYWlyZZIBE3VzZWRfY2xvdGhpbmdfc3RvcmU",54
+Ding Fring,48.83628473,2.308695313,Friperie,Outils de 2nd main,"39 Rue Labrouste, 75015",15e,"https://www.google.fr/maps/place/Ding+Fring/@48.8335213,2.1761715,12z/data=!4m9!1m2!2m1!1sDing+Fring!3m5!1s0x47e67046308e65a9:0x415cf2e7b4aabb23!8m2!3d48.8335195!4d2.3080118!15sCgpEaW5nIEZyaW5nIgOIAQFaDCIKZGluZyBmcmluZ5IBE3VzZWRfY2xvdGhpbmdfc3RvcmU",55
+Ding Fring,48.87615423,2.388346191,Friperie,Outils de 2nd main,"340 Rue des Pyrénées, 75020 ",20e,"https://www.google.fr/maps/place/Ding+Fring/@48.8335213,2.1761715,12z/data=!4m9!1m2!2m1!1sDing+Fring!3m5!1s0x47e66deaee76ed77:0x41e6951b2e55acaa!8m2!3d48.8738718!4d2.3888455!15sCgpEaW5nIEZyaW5nIgOIAQFaDCIKZGluZyBmcmluZ5IBE3VzZWRfY2xvdGhpbmdfc3RvcmU",56
+Emmaüs La Friperie Solidaire,48.84797736,2.38383292,Friperie,Outils de 2nd main,"17 Rue Chaligny, 75012 ",12e,"https://www.google.fr/maps/place/Emma%C3%BCs+La+Friperie+Solidaire/@48.8465653,2.3505306,14z/data=!4m9!1m2!2m1!1sEmma%C3%BCs+near+12e+Arrondissement+de+Paris,+Paris!3m5!1s0x47e6720de79a84c1:0xc7a374509d7f4db3!8m2!3d48.8465653!4d2.3834896!15sCi9FbW1hw7xzIG5lYXIgMTJlIEFycm9uZGlzc2VtZW50IGRlIFBhcmlzLCBQYXJpcyIDiAEBWjAiLmVtbWHDvHMgbmVhciAxMmUgYXJyb25kaXNzZW1lbnQgZGUgcGFyaXMgcGFyaXOSARN1c2VkX2Nsb3RoaW5nX3N0b3Jl",57
+La Textilerie,48.88153901,2.363041751,Matières textiles à donner ou recycler,Outils de 2nd main,"22 R. du Château Landon, 75010",10e,"https://www.google.fr/maps/place/LA+TEXTILERIE/@48.8814139,2.3608045,17z/data=!3m1!4b1!4m5!3m4!1s0x47e66e7151440001:0xd77675c9db617655!8m2!3d48.8814001!4d2.3630482",58
+Emmaüs 12e,48.84304454,2.393053648,Matières textiles à donner ou recycler,Outils de 2nd main,"102 Rue de Reuilly, 75012",12e,"https://www.google.fr/maps/place/Boutique+Emma%C3%BCs+Reuilly+Paris+12/@48.8465653,2.3505306,14z/data=!4m9!1m2!2m1!1sEmma%C3%BCs+near+12e+Arrondissement+de+Paris,+Paris!3m5!1s0x47e6720c4c15fb6d:0x51b9c6129c6545c8!8m2!3d48.8414491!4d2.3932256!15sCi9FbW1hw7xzIG5lYXIgMTJlIEFycm9uZGlzc2VtZW50IGRlIFBhcmlzLCBQYXJpcyIDiAEBWjAiLmVtbWHDvHMgbmVhciAxMmUgYXJyb25kaXNzZW1lbnQgZGUgcGFyaXMgcGFyaXOSARN1c2VkX2Nsb3RoaW5nX3N0b3Jl",59
+Emmaüs 5e,48.85021791,2.349022506,Matières textiles à donner ou recycler,Outils de 2nd main,"6 Rue Monge, 75005 ",5e,"https://www.google.fr/maps/place/Emmaus+Alternatives/@48.8493046,2.3163055,14z/data=!4m9!1m2!2m1!1sEmma%C3%BCs+near+5%C3%A8me+Arrondissement,+Paris!3m5!1s0x47e671767e06c587:0x16a73c6729646d26!8m2!3d48.8493046!4d2.3492645!15sCihFbW1hw7xzIG5lYXIgNcOobWUgQXJyb25kaXNzZW1lbnQsIFBhcmlzWikiJ2VtbWHDvHMgbmVhciA1w6htZSBhcnJvbmRpc3NlbWVudCBwYXJpc5IBE3VzZWRfY2xvdGhpbmdfc3RvcmU",60
+Emmaüs 9e,48.88580708,2.345544173,Matières textiles à donner ou recycler,Outils de 2nd main,"27-29 Blvd Marguerite de Rochechouart, 75009 ",9e,"https://www.google.fr/maps/place/Boutique+Emma%C3%BCs+Paris+9/@48.8829902,2.3128916,14z/data=!4m9!1m2!2m1!1sEmma%C3%BCs+near+9e!3m5!1s0x47e66e426c3edfb1:0x66a1475bb993132e!8m2!3d48.8829782!4d2.3458558!15sCg9FbW1hw7xzIG5lYXIgOWUiA4gBAVoRIg9lbW1hw7xzIG5lYXIgOWWSARN1c2VkX2Nsb3RoaW5nX3N0b3Jl",61
+Conteneur Murat,48.87903532,2.288015008,Matières textiles à donner ou recycler,Outils de 2nd main,"52 Av. de la Grande Armée, 75017",17e,"https://www.google.fr/maps/place/52+Av.+de+la+Grande+Arm%C3%A9e,+75017+Paris/@48.8766178,2.2851001,17z/data=!3m1!4b1!4m5!3m4!1s0x47e66ff2d8885997:0x43a38f589b2c1f06!8m2!3d48.8766178!4d2.2872888",62
+La Couturière de Montmartre,48.89468707,2.345727564,Matières textiles à donner ou recycler,Outils de 2nd main,"90 Rue du Mont-Cenis, 75018",18e,"https://www.google.fr/maps/place/90+Rue+du+Mont-Cenis,+75018+Paris/@48.894546,2.3435335,17z/data=!3m1!4b1!4m5!3m4!1s0x47e66e5fb08862cb:0x372872eb194cc74f!8m2!3d48.894546!4d2.3457222",63
+Conteneur Murat,48.837124,2.259665,Conteneur vêtements,Outils de 2nd main,"126 boulevard Murat, 75016",16e,"https://www.google.fr/maps/place/126+Bd+Murat,+75016+Paris/@48.8371782,2.2567576,17z/data=!3m1!4b1!4m5!3m4!1s0x47e67a95e60b8bc3:0x287726d5fd0d0722!8m2!3d48.8371782!4d2.2589463",64
+Conteneur Ding fring,48.833848,2.307987,Conteneur vêtements,Outils de 2nd main,"39 rue labrouste, 75015",15e,"https://www.google.fr/maps/place/39+Rue+Labrouste,+75015+Paris/@48.8335213,2.3058187,17z/data=!3m1!4b1!4m5!3m4!1s0x47e670463a41a06d:0x5bfea2e934488d29!8m2!3d48.8335213!4d2.3080074",65
+Espace tri Poterne des Peupliers,48.816993,2.354626,Conteneur vêtements,Outils de 2nd main,"8 rue Jacques Destrée, 75013",13e,"https://www.google.fr/maps/place/8+Rue+Jacques+Destr%C3%A9e,+75013+Paris/@48.8169691,2.3525025,17z/data=!3m1!4b1!4m5!3m4!1s0x47e671828d193791:0x7ad3b6cfd3658e5c!8m2!3d48.8169691!4d2.3546912",66
+Conteneur Ernest Denis,48.841437,2.33752,Conteneur vêtements,Outils de 2nd main,"2 place Ernest Denis, 75006",6e,"https://www.google.fr/maps/place/Pl.+Ernest+Denis,+75006+Paris/@48.8418555,2.3352406,17z/data=!3m1!4b1!4m5!3m4!1s0x47e671c4064891c3:0x35cfe696a24ab7cb!8m2!3d48.8418555!4d2.3374293",67
+Conteneur Saint Père,48.85598,2.331621,Conteneur vêtements,Outils de 2nd main,"43 rue des Saints-Pères, 75006",6e,"https://www.google.fr/maps/place/43+Rue+des+Saints-P%C3%A8res,+75006+Paris/@48.8559796,2.3294318,17z/data=!3m1!4b1!4m5!3m4!1s0x47e671d7dd0298e9:0xe44b10630295cb14!8m2!3d48.8559796!4d2.3316205",68
+Conteneur Bastille,48.84769,2.367693,Conteneur vêtements,Outils de 2nd main,"14 boulevard de la Bastille, 75012",12e,"https://www.google.fr/maps/place/14+Bd+de+la+Bastille,+75012+Paris/@48.8476897,2.3655043,17z/data=!3m1!4b1!4m5!3m4!1s0x47e67202f2c52acb:0x85cd7c6b89d82707!8m2!3d48.8476897!4d2.367693",69
+Conteneur Chevaleret,48.831775,2.372718,Conteneur vêtements,Outils de 2nd main,"127 rue du Chevaleret, 75013",13e,"https://www.google.fr/maps/place/127+Rue+du+Chevaleret,+75013+Paris/@48.8318022,2.3702318,17z/data=!3m1!4b1!4m5!3m4!1s0x47e67223bd907d87:0x85d26bbe4a3f96a1!8m2!3d48.8318022!4d2.3724205",70
+Conteneur Prony,48.881395,2.306351,Conteneur vêtements,Outils de 2nd main,"19 rue de Prony, 75017",17e,"https://www.google.fr/maps/place/19+Rue+de+Prony,+75017+Paris/@48.8811644,2.3044191,17z/data=!3m1!4b1!4m5!3m4!1s0x47e66fbeb72b7ac7:0x16d70ac625a3179a!8m2!3d48.8811644!4d2.3066078",71
+Conteneur Flandre,48.886719,2.371343,Conteneur vêtements,Outils de 2nd main,"41 avenue de Flandre, 75019",19e,"https://www.google.fr/maps/place/41+Av.+de+Flandre,+75019+Paris/@48.8867183,2.369148,17z/data=!3m1!4b1!4m5!3m4!1s0x47e66dd79112a015:0xdbc1acc319b7a994!8m2!3d48.8867183!4d2.3713367",72
+Conteneur Saint Martin,48.876654,2.360993,Conteneur vêtements,Outils de 2nd main,"160 rue(s) du Faubourg Saint Martin, 75010",10e,"https://www.google.fr/maps/place/160+Rue+du+Faubourg+Saint-Martin,+75010+Paris/@48.8765813,2.3610912,17z/data=!3m1!4b1!4m5!3m4!1s0x47e66e732fc7260f:0x26c45cc7beb62305!8m2!3d48.8765813!4d2.3610912",73
+La Rockette Montgallet - La Petite Rockette,48.84497547,2.389416028,Electroménager,Outils de 2nd main,"41 Rue Jacques Hillairet, 75012 ",12e,"https://www.google.fr/maps/place/La+Rockette+Montgallet+-+Ressourcerie+de+la+Petite+Rockette/@48.8528263,2.3690742,14z/data=!4m9!1m2!2m1!1sLa+Petite+Rockette!3m5!1s0x47e673cf12ecc8a5:0x9bafb5fbbda31db4!8m2!3d48.8435662!4d2.3892335!15sChJMYSBQZXRpdGUgUm9ja2V0dGVaFCISbGEgcGV0aXRlIHJvY2tldHRlkgEMdGhyaWZ0X3N0b3Jl",74
+La Rockette Père Lachaise - La Petite Rockette,48.8621092,2.3838277,Electroménager,Outils de 2nd main,"125 Rue du Chemin Vert, 75011",11e,"https://www.google.fr/maps/place/La+Rockette+P%C3%A8re+Lachaise+-+Ressourcerie+de+la+Petite+Rockette/@48.8528263,2.3690742,14z/data=!4m9!1m2!2m1!1sLa+Petite+Rockette!3m5!1s0x47e66d6370875a23:0x8442ba1dbe21241e!8m2!3d48.862089!4d2.383934!15sChJMYSBQZXRpdGUgUm9ja2V0dGVaFCISbGEgcGV0aXRlIHJvY2tldHRlkgEMdGhyaWZ0X3N0b3Jl",75
+La Ressourcerie des Batignolles,48.888946,2.308687,Electroménager,Outils de 2nd main,"132 Rue de Saussure, 75017",17e,"https://www.google.fr/maps/place/La+Ressourcerie+des+Batignolles+-+Boutique+solidaire/@48.8724156,2.2482938,12z/data=!4m9!1m2!2m1!1sLa+ressourcerie+des+sportifs!3m5!1s0x47e66fa251765777:0x792fed44a0555a7b!8m2!3d48.8890567!4d2.3083537!15sChxMYSByZXNzb3VyY2VyaWUgZGVzIHNwb3J0aWZzWh4iHGxhIHJlc3NvdXJjZXJpZSBkZXMgc3BvcnRpZnOSARZ2b2x1bnRlZXJfb3JnYW5pemF0aW9umgEkQ2hkRFNVaE5NRzluUzBWSlEwRm5TVU5UTldGcVNqWlJSUkFC",76
+L'alternative,48.86658349,2.345790041,Ressourcerie,Outils de 2nd main,"13 Rue Léopold Bellan, 75002 ",2e,"https://www.google.fr/maps/place/Ressourcerie+Paris+Centre+L'Alternative/@48.8665074,2.2470732,12z/data=!4m9!1m2!2m1!1sL'alternative+!3m5!1s0x47e66e17f9756aed:0x8061bbaa79b29da9!8m2!3d48.8665092!4d2.3458305!15sCg1MJ2FsdGVybmF0aXZlWg8iDWwgYWx0ZXJuYXRpdmWSAQx0aHJpZnRfc3RvcmU",77
+Ma ressourcerie,48.82381286,2.357753714,Ressourcerie,Outils de 2nd main,"126 Av. d'Italie, 75013",13e,"https://www.google.fr/maps/place/Ma+Ressourcerie/@48.8236151,2.2258749,12z/data=!4m9!1m2!2m1!1sLa+ressourcerie+des+sportifs!3m5!1s0x47e6718fc3f38605:0xe288ac29a6cf8f7f!8m2!3d48.8236216!4d2.357785!15sChxMYSByZXNzb3VyY2VyaWUgZGVzIHNwb3J0aWZzWh4iHGxhIHJlc3NvdXJjZXJpZSBkZXMgc3BvcnRpZnOSARplbnZpcm9ubWVudGFsX29yZ2FuaXphdGlvbpoBI0NoWkRTVWhOTUc5blMwVkpRMEZuU1VSek9WQklNRVZSRUFF",78
+Le poulpe,48.88917567,2.353914668,Ressourcerie,Outils de 2nd main,"4B Rue d'Oran, 75018 ",18e,"https://www.google.fr/maps/place/Le+Poulpe+-+la+nouvelle+ressourcerie/@48.8890346,2.3518118,17z/data=!3m1!4b1!4m5!3m4!1s0x47e66fbfbcfaf037:0xc7707e27a32a247e!8m2!3d48.8890012!4d2.3539988",79
+La ressourcerie des sportifs,48.89661609,2.319980085,Ressourcerie,Outils de 2nd main,81 Boulevard Bessières 75017,17e,"https://www.google.fr/maps/place/Recyclerie+Sportive+Paris+Bessi%C3%A8res+-+Boutique+de+seconde+main+et+atelier+co-r%C3%A9paration+v%C3%A9los/@48.8964621,2.3192799,18.46z/data=!4m13!1m7!3m6!1s0x47e66faa03662d3d:0x365871f29cfb597b!2s81+Bd+Bessi%C3%A8res,+75017+Paris!3b1!8m2!3d48.8964821!4d2.3199479!3m4!1s0x47e66f009cec889f:0xd161e492e9e95dcb!8m2!3d48.8963988!4d2.3196744",80`);
+        const p = s['data']
+        console.log(p)
+        var map = L.map(
+                "map",
+                {
+                    center: [48.866667, 2.333333],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 13,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+        );    
+        var tile_layer_c5a7ca4ae908d59f5ede4a16d78d98ee = L.tileLayer(
+            "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+            {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+        ).addTo(map);
+        var greenIcon = L.icon({
+            iconUrl: 'radis.png',
+            iconSize:     [35.5, 50], // size of the icon
+         // point from which the popup should open relative to the iconAnchor
+        });
+        var yIcon = L.icon({
+            iconUrl: 'poisson.png',
+            iconSize:     [35.5, 50], // size of the icon
+         // point from which the popup should open relative to the iconAnchor
+        });
+        var pIcon = L.icon({
+            iconUrl: 'pull.png',
+            iconSize:     [35.5, 50], // size of the icon
+         // point from which the popup should open relative to the iconAnchor
+        });
+        var mIcon = L.icon({
+            iconUrl: 'graine.png',
+            iconSize:     [35.5, 50], // size of the icon
+         // point from which the popup should open relative to the iconAnchor
+        });
+        var vIcon = L.icon({
+            iconUrl: 'recy.png',
+            iconSize:     [35.5, 50], // size of the icon
+         // point from which the popup should open relative to the iconAnchor
+        });
+        var bIcon = L.icon({
+            iconUrl: 'mal.png',
+            iconSize:     [35.5, 50], // size of the icon
+         // point from which the popup should open relative to the iconAnchor
+        });
+        var rIcon = L.icon({
+            iconUrl: `livre.png`,
+            iconSize:     [35.5, 50], // size of the icon
+         // point from which the popup should open relative to the iconAnchor
+        });
+
+        q = []
+        for (let i in p) {
+            if (p[i][3] == 'AMAP'){
+                var ke = L.marker(
+                        [p[i][1], p[i][2]],
+                        {icon : greenIcon});
+                q.push(ke);
+            } else if (p[i][3] == 'Poiscaille') {
+                var ke = L.marker(
+                        [p[i][1], p[i][2]],
+                        {icon : yIcon});
+                q.push(ke);
+            } else if (p[i][3] == 'Friperie') {
+                var ke = L.marker(
+                        [p[i][1], p[i][2]],
+                        {icon : pIcon});
+                q.push(ke);
+            }
+            else if (p[i][3] == 'Ressourcerie' || p[i][3] == 'Electroménager' ) {
+                var ke = L.marker(
+                        [p[i][1], p[i][2]],
+                        {icon : bIcon});
+                q.push(ke);
+            }
+            else if (p[i][3] == 'Grainotheque') {
+                var ke = L.marker(
+                        [p[i][1], p[i][2]],
+                        {icon : mIcon});
+                q.push(ke);
+            }
+            else if (p[i][3] == 'Matières textiles à donner ou recycler') {
+                var ke = L.marker(
+                        [p[i][1], p[i][2]],
+                        {icon : vIcon});
+                q.push(ke);
+            }
+            else if (p[i][3] == 'Conteneur vêtements') {
+                var ke = L.marker(
+                        [p[i][1], p[i][2]],
+                        {icon : vIcon});
+                q.push(ke);
+            }
+            else if (p[i][3] == 'Formations') {
+                var ke = L.marker(
+                        [p[i][1], p[i][2]],
+                        {icon : rIcon});
+                q.push(ke);
+            }
+        };
+
+        function myFunction() {
+            for (let i in p) {
+                if ( p[i][3] == 'AMAP') {
+                    if (document.querySelector('#other').checked) {
+                            map.addLayer(q[p[i][8]]);
+                            
+                            q[p[i][8]].bindTooltip(
+                                p[i][0]
+                                + "<br>"
+                                + p[i][3]
+                                + "<br>"
+                                + "(clique pour iténéraire)"
+                            );
+                            q[p[i][8]].bindPopup(L.popup({"maxWidth": 2650}).setContent('<a href ='+ p[i][7] +'> Itinéraire  </a>'));
+                    } else {
+                        map.removeLayer(q[p[i][8]])
+                    }
+                };
+            };
+        };
+
+        function myFunction1() {
+            for (let i in p) {
+                if ( p[i][3] == 'Poiscaille') {
+                    if (document.querySelector('#other1').checked) {
+                            map.addLayer(q[p[i][8]]);
+                            q[p[i][8]].bindTooltip(
+                                p[i][0]
+                                + "<br>"
+                                + p[i][3]
+                                + "<br>"
+                                + "(clique pour iténéraire)"
+                            );
+                            q[p[i][8]].bindPopup(L.popup({"maxWidth": 2650}).setContent('<a href ='+ p[i][7] +'> Itinéraire  </a>'));
+                    } else {
+                        map.removeLayer(q[p[i][8]])
+                    }
+                };
+            };
+        };
+        function myFunction2() {
+            for (let i in p) {
+                if ( p[i][3] == 'Friperie' && p[i][0] !== 'Emmaüs La Friperie Solidaire') {
+                    if (document.querySelector('#other2').checked) {
+                            map.addLayer(q[p[i][8]]);
+                            q[p[i][8]].bindTooltip(
+                                p[i][0]
+                                + "<br>"
+                                + p[i][3]
+                                + "<br>"
+                                + "(clique pour iténéraire)"
+                            );
+                            q[p[i][8]].bindPopup(L.popup({"maxWidth": 2650}).setContent('<a href ='+ p[i][7] +'> Itinéraire  </a>'));
+                    } else {
+                        map.removeLayer(q[p[i][8]])
+                    }
+                };
+            };
+        };
+        function myFunction3() {
+            for (let i in p) {
+                if (p[i][3] == 'Ressourcerie' || p[i][3] == 'Electroménager' ) {
+                    if (document.querySelector('#other3').checked) {
+                            map.addLayer(q[p[i][8]]);
+                            q[p[i][8]].bindTooltip(
+                                p[i][0]
+                                + "<br>"
+                                + p[i][3]
+                                + "<br>"
+                                + "(clique pour iténéraire)"
+                            );
+                            q[p[i][8]].bindPopup(L.popup({"maxWidth": 2650}).setContent('<a href ='+ p[i][7] +'> Itinéraire  </a>'));
+                    } else {
+                        map.removeLayer(q[p[i][8]])
+                    }
+                };
+            };
+        };
+        function myFunction4() {
+            for (let i in p) {
+                if (p[i][3] == 'Grainotheque' && p[i][0] !== 'La maison du Jardinage') {
+                    if (document.querySelector('#other4').checked) {
+                            map.addLayer(q[p[i][8]]);
+                            q[p[i][8]].bindTooltip(
+                                p[i][0]
+                                + "<br>"
+                                + p[i][3]
+                                + "<br>"
+                                + "(clique pour iténéraire)"
+                            );
+                            q[p[i][8]].bindPopup(L.popup({"maxWidth": 2650}).setContent('<a href ='+ p[i][7] +'> Itinéraire  </a>'));
+                    } else {
+                        map.removeLayer(q[p[i][8]])
+                    }
+                };
+            };
+        };
+        function myFunction5() {
+            for (let i in p) {
+                if (p[i][3] == 'Matières textiles à donner ou recycler'|| p[i][3] == 'Conteneur vêtements' && p[i][0] !== 'Conteneur Saint Martin' ) {
+                    if (document.querySelector('#other5').checked) {
+                            map.addLayer(q[p[i][8]]);
+                            q[p[i][8]].bindTooltip(
+                                p[i][0]
+                                + "<br>"
+                                + p[i][3]
+                                + "<br>"
+                                + "(clique pour iténéraire)"
+                            );
+                            q[p[i][8]].bindPopup(L.popup({"maxWidth": 2650}).setContent('<a href ='+ p[i][7] +'> Itinéraire  </a>'));
+                    } else {
+                        map.removeLayer(q[p[i][8]])
+                    }
+                };
+            };
+        };
+        function myFunction6() {
+            for (let i in p) {
+                if (p[i][3] == 'Formations') {
+                    if (document.querySelector('#other6').checked) {
+                            map.addLayer(q[p[i][8]]);
+                            q[p[i][8]].bindTooltip(
+                                p[i][0]
+                                + "<br>"
+                                + p[i][3]
+                                + "<br>"
+                                + "(clique pour iténéraire)"
+                            );
+                            q[p[i][8]].bindPopup(L.popup({"maxWidth": 2650}).setContent('<a href ='+ p[i][7] +'> Itinéraire  </a>'));
+                    } else {
+                        map.removeLayer(q[p[i][8]])
+                    }
+                };
+            };
+        };
+    </script>
+</html>

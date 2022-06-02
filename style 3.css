@@ -1,0 +1,301 @@
+html, body {
+    /* font-size: 16px; */
+    font-family: Bahnschrift;
+    scroll-behavior: smooth;
+    margin: 0px;    
+    height: 100vw;
+    height: 100vh;
+}
+            
+.Link {
+position: relative;
+text-decoration: none;
+display: inline-block;
+color: black;
+padding: 0 0px;
+transition: color ease 0.3s;
+}
+/* Hover */
+.Link::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 10%;
+    left: 0;
+    bottom: 0;
+    background: rgba(97,163,0,1);
+    transition: all ease 0.3s;
+}
+
+.Link:hover {
+    color: white;
+}
+
+.Link:hover::after {
+    height: 100%;
+    }
+a {
+    cursor: pointer;
+}
+p {
+    line-height: 1.9;
+}
+/* Fin de hover */
+
+/* Navigation bar */
+.navigation {
+        z-index: 3;
+        /* overflow: hidden; */
+        background-color: #fff;
+        border-bottom:3px solid #ddd;
+        border-top:3px solid #ddd;
+        position: fixed; /* Set the navbar to fixed position */
+        top: 0; /* Position the navbar at the top of the page */
+        width: 100%; /* Full width */
+        margin: 0px;
+}
+/* .navigation p {
+    padding: 10px 6px;
+  } */
+.nav {
+    display : flex ;
+    flex-direction: row;
+    justify-content: flex-end;
+    font-weight : bold;
+    font-size :  20px;
+    top: 5px;
+    margin-right: 30px;
+}
+.cat {
+    padding-top: 0px;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+.logo {
+    display: flex;
+    justify-content: flex-start;
+    
+}
+#PARIS___DEMAIN_ {
+    left: 75px;
+    top: 15px;
+    position: absolute;
+    width: 943px;
+    height: 87px;
+    text-align: left;
+    font-family: Bahnschrift;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    color: rgba(97,163,0,1);
+    letter-spacing: -0.3px;
+    line-height : 28px;
+}
+#SUR {
+    left: 160px;
+    top: 15px;
+    position: absolute;
+    width: 66px;
+    height: 30px;
+    line-height: 40px;
+    margin-top: -5px;
+    text-align: left;
+    font-family: Bahnschrift;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 17px;
+    color: rgba(147,197,144,1);
+    letter-spacing: -0.3px;
+}
+
+
+#Calque_2_m {
+    position: absolute;
+    width: 35.5px;
+    height: 50px;
+    left: 30px;
+    top: 15px;
+}
+/* fin de navigation bar */
+
+/* first section */
+.content {
+    display: block;
+    height: 100vh;
+    position: relative;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #fff;
+    scroll-snap-align: start;
+    
+}
+.text {
+    margin-top: 35vh;
+    width: 45%;
+    margin-left: 50px;
+
+}
+#th_4 {
+    position: absolute;
+    margin-top: 13vh;
+    width: 520px;
+    height: 259px;
+    top: 150.707px;
+    right: 70px;
+
+}
+#Calque_1 {
+    margin-top: 13vh;
+    position: absolute;
+    width: 52.5px;
+    height: 70.5px;
+    right:200px;
+    top: 290px;
+    animation: animate2 1.5s 1;
+}
+#Calque_2_v {
+    margin-top: 13vh;
+    position: absolute;
+    width: 52.5px;
+    height: 70.5px;
+    top: 270.631px;
+    right: 420px;
+    animation: animate3 1.5s 1;
+}
+
+#Calque_2_x {
+    margin-top: 13vh;
+    position: absolute;
+    width: 52.5px;
+    height: 70.5px;
+    top: 150.707px;
+    right: 300px;
+    animation: animate1 1.5s ;
+}
+@keyframes animate1 {
+    0% {
+        opacity : 0;
+        top : 100px;
+    }
+    100% {
+        opacity : 1 ;
+        top:150.707px ;
+    }   
+}
+@keyframes animate2 {
+    0% {
+        opacity : 0;
+        top : 240px;
+    }
+    100% {
+        opacity : 1 ;
+        top:290px ;
+    }   
+}
+@keyframes animate3 {
+    0% {
+        opacity : 0;
+        top : 220px;
+    }
+    100% {
+        opacity : 1 ;
+        top:270.631px ;
+    }  
+} 
+
+
+
+.maps {display: inline-block;
+    /* background-color: aqua; */
+    scroll-snap-align: start;
+}
+#carte1 {
+    /* background-color: aquamarine; */
+    height: 100vh;
+    padding-top: 7vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+/* #poster1 {
+    width: 75vw;
+    height: 75vh;
+    margin: 31px;
+    margin-top: 17vh;
+    flex-shrink: 1;
+} */
+#giec_alimentation {
+    display: block;
+    /* background-color: antiquewhite; */
+    align-items: center;
+    justify-content: space-around;
+    /* height: 100vh; */
+    /* padding-top: 15vh; */
+}
+/* #lorem {
+    margin-top: 17vh;
+} */
+.poster {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: green; */
+    border-radius: 15px;
+    margin: 20px;
+    padding: 20px;
+}
+
+
+#map { width: 60vw;
+    height : 75vh;
+    z-index: 1;
+}
+.oui {
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    width: 100%;
+    height: 100%;
+}
+#cc {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    /* margin-top: 13vh; */
+    font-size: 22px;
+    line-height: 40px;
+}
+.iii {
+    margin: 15px;
+    max-width: 45vw;
+    max-height: 45vh;
+}
+#poster1 { 
+    padding-top: 12vh;
+    max-width: 75vw;
+    max-height: 75vh;
+    margin: 20px;
+}
+#poster2 { 
+    max-width: 75vw;
+    max-height: 75vh;
+    margin: 20px;
+}
+#poster3 { 
+    max-width: 75vw;
+    max-height: 75vh;
+    margin: 20px;
+}
+
+@media screen and (max-width: 992px) {
+    .nav {
+        display: none;
+    }
+    #logo {
+        display: flex;
+        justify-content: center;
+    }
+    .oui {
+        display: block;
+    }
+}
