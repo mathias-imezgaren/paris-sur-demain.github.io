@@ -510,9 +510,11 @@ first section
     margin-left:10px;
     margin-bottom: 200px;
 }
-#map { width: 50vw;
-    height : 50vh;
-z-index: 3;}
+#map { width: 70vw;
+    height : 20vh;
+    margin-left: 1Opx;
+z-index: 1;
+    }
 
 .oui {
     scroll-snap-type: y mandatory;
@@ -521,5 +523,6 @@ z-index: 3;}
     height: 100%;
 }
     
-         
+ #cc {
+     font-size : 12px;
 }
