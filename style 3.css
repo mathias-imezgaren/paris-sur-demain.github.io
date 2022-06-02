@@ -422,7 +422,7 @@ first section
     
 }
 .text {
-  margin-top: 0vh;
+  margin-top: -100px;
   width: initial;
   margin-left: 30px;
   margin-right: 30px;
@@ -505,14 +505,14 @@ first section
 }
 #carte1 {
     /* background-color: aquamarine; */
-    height: 100vh;
+    height: 100px;
     /*padding-top: 7vh;*/
-    display: flex;
+    display: block;
     align-items: center;
     /*justify-content: space-around;*/
 }
 #poster1 {
-    display:block;
+    display:flex;
     position:relative;
     margin-top:-500px;
     width: 70vw;
