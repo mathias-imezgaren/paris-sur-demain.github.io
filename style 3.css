@@ -226,7 +226,7 @@ p {
     flex-shrink: 1;
 } */
 #giec_alimentation {
-    display: block;
+    display: flex;
     /* background-color: antiquewhite; */
     align-items: center;
     justify-content: space-around;
