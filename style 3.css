@@ -369,6 +369,14 @@ p {
     justify-content: flex-start;
     
 }
+#giec_alimentation {
+    display: block;
+    /* background-color: antiquewhite; */
+    align-items: center;
+    justify-content: space-around;
+    /* height: 100vh; */
+    /* padding-top: 15vh; */
+}
 #PARIS___DEMAIN_ {
   left: 85px;
   top: 15px;
